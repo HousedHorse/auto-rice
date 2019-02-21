@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-DEST=/tmp/testdir
+DEST=$HOME
 
 # copy dotfiles
 cp -r dotfiles /tmp/testdir
