@@ -188,8 +188,15 @@ header-includes: |
   \renewcommand{\sectionautorefname}{Section}
   \renewcommand{\subsectionautorefname}{Subection}
   \renewcommand{\subsubsectionautorefname}{Subection}
-  \renewcommand{\paragraph}{Paragraph}
-  \renewcommand{\subparagraph}{Subparagraph}
+  \renewcommand{\paragraphautorefname}{}
+  \renewcommand{\subparagraphautorefname}{}
+
+  \usepackage{nameref}
+
+  \makeatletter
+  \renewcommand{\theparagraph}{\bfseries \@currentlabelname}
+  \renewcommand{\thesubparagraph}{\itshape \@currentlabelname}
+  \makeatother
   ```
 output:
   pdf_document:
