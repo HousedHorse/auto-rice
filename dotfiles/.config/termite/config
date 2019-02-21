@@ -1,0 +1,159 @@
+[options]
+resize_grip = false
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = true
+visible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = Inconsolata-dz for Powerline 12
+scrollback_lines = 1000
+search_wrap = true
+cursor_blink = system
+cursor_shape = block
+browser = firefox
+
+#[colors]
+#
+## special
+#foreground      = #f3f3f3
+#foreground_bold = #f3f3f3
+#cursor          = #f3f3f3
+#color30=#666
+#background = rgba(30,30,30,.85)
+#
+## black
+#color0  = #1e1e1e
+#color8  = #5f5a60
+#
+## red
+#color1  = #cf6a4c
+#color9  = #cf6a4c
+#
+## green
+#color2  = #84ae84
+#color10 = #84ae84
+#
+## yellow
+#color3  = #f9ee98
+#color11 = #f9ee98
+#
+## blue
+#color4  = #7587a6
+#color12 = #7587a6
+#
+## magenta
+#color5  = #9b859d
+#color13 = #9b859d
+#
+## cyan
+#color6  = #afc4db
+#color14 = #afc4db
+#
+## white
+#color7  = #f3f3f3
+#color15 = #f3f3f3
+
+[colors]
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #000000
+
+# black
+color0  = #1e1e1e
+color8  = #5f5a60
+
+# red
+color1  = #e57654
+color9  = #e57654
+
+# green
+color2  = #aee6ae
+color10 = #aee6ae
+
+# yellow
+color3  = #e6dc8c
+color11 = #e6dc8c
+
+# blue
+color4  = #a2bae6
+color12 = #a2bae6
+
+# magenta
+color5  = #dd82e6
+color13 = #dd82e6
+
+# cyan
+color6  = #b8cde6
+color14 = #b8cde6
+
+# white
+color7  = #f3f3f3
+color15 = #f3f3f3
+
+
+[colors]
+
+# special
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+background      = #1d1f21
+
+# black
+color0  = #1d1f21
+color8  = #969896
+
+# red
+color1  = #cc6666
+color9  = #cc6666
+
+# green
+color2  = #b5bd68
+color10 = #b5bd68
+
+# yellow
+color3  = #f0c674
+color11 = #f0c674
+
+# blue
+color4  = #81a2be
+color12 = #81a2be
+
+# magenta
+color5  = #b294bb
+color13 = #b294bb
+
+# cyan
+color6  = #8abeb7
+color14 = #8abeb7
+
+# white
+color7  = #c5c8c6
+color15 = #ffffff
+
+[colors]
+foreground      = #f3f3f3
+foreground_bold = #f3f3f3
+cursor          = #f3f3f3
+color30=#666
+background = rgba(30,30,30,.85)
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
