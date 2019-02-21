@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# update repo
 git pull
 
 # config files
@@ -8,8 +9,8 @@ POLYBARRC=dotfiles/.config/polybar/config
 I3RC=dotfiles/.config/i3/config
 VIMRC=dotfiles/.vimrc
 BASHRC=dotfiles/.bashrc
-VIMFILES=dotfiles/.vim/*
-VIMFILES=dotfiles/.vimskeletons/*
+VIMFILES=dotfiles/.vim
+VIMSKELETONS=dotfiles/.vimskeletons
 
 # make directories if they don't exist
 mkdir -p ~/.config/termite
