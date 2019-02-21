@@ -3,8 +3,8 @@
 DEST=$HOME
 
 # copy dotfiles
-cp -r dotfiles /tmp/testdir
-mv $DEST/dotfiles/.* $DEST
+cp -r dotfiles $DEST
+cp -r $DEST/dotfiles/.* $DEST
 rm -rf $DEST/dotfiles
 
 # make .scripts executable
