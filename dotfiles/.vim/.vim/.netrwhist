@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/housedhorse/documents/projects/curr/rms-editor'
+let g:netrw_dirhist_2='/home/housedhorse/documents'
+let g:netrw_dirhist_3='/home/housedhorse/documents/school/3804/notes'
+let g:netrw_dirhist_4='/home/housedhorse/documents/school/ta/tutorials/tut1/c-simple-shell'
+let g:netrw_dirhist_5='/home/housedhorse/mike/.vimskeletons'

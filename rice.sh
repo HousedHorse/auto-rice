@@ -9,6 +9,7 @@ I3RC=dotfiles/.config/i3/config
 VIMRC=dotfiles/.vimrc
 BASHRC=dotfiles/.bashrc
 VIMFILES=dotfiles/.vim/*
+VIMFILES=dotfiles/.vimskeletons/*
 
 # make directories if they don't exist
 mkdir -p ~/.config/termite

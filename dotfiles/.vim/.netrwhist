@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/tmp/otherfiles'
+let g:netrw_dirhist_2='/home/housedhorse/documents/school/ta/assignments/a1/grading/done/Abrol-Vineet_36083881_assignsubmission_file_'
+let g:netrw_dirhist_3='/home/housedhorse/documents/school/COMP3004/project/req-analysis-document/csv/use-cases/needs-work'
+let g:netrw_dirhist_4='/home/housedhorse/documents/school/COMP3008/projects/p1/document/csv'
+let g:netrw_dirhist_5='/home/housedhorse/documents/school/thesis/ideas'
+let g:netrw_dirhist_6='/home/housedhorse'
+let g:netrw_dirhist_7='/home/housedhorse/documents/projects/qtcreator/taskmaster'
+let g:netrw_dirhist_8='/home/housedhorse/documents/projects/qtcreator/taskmaster/icons'
+let g:netrw_dirhist_9='/home/housedhorse/.vim'
