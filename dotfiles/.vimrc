@@ -33,7 +33,7 @@ if has("autocmd")
     filetype plugin indent on
 
     " remove trailing whitespace
-    autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufWritePre * let _save_pos=getpos(".") | %s/\s\+$//e | let _s=@/ | let @/=_s | nohl | unlet _s | call setpos('.', _save_pos) | unlet _save_pos
 
     " use actual tab chars in Makefiles.
     autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
@@ -64,7 +64,7 @@ if has("autocmd")
     autocmd FileType markdown map <F5> :!(pandoc % -f gfm -o /tmp/%:t:r . '.pdf')
 
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-    
+
     " RMS for age of empires ii
     autocmd BufNewFile *.rms execute "r $HOME/.vimskeletons/rms" | execute "w"| execute "redraw!"
 
