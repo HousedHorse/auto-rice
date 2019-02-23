@@ -33,7 +33,7 @@ if has("autocmd")
     filetype plugin indent on
 
     " remove trailing whitespace
-    autocmd BufWritePre * let _save_pos=getpos(".") | %s/\s\+$//e | let _s=@/ | let @/=_s | noh | unlet _s | call setpos('.', _save_pos) | unlet _save_pos | noh
+    autocmd BufWritePre * noh | let _save_pos=getpos(".") | %s/\s\+$//e | let _s=@/ | let @/=_s | noh | unlet _s | call setpos('.', _save_pos) | unlet _save_pos | noh
 
     " use actual tab chars in Makefiles.
     autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
