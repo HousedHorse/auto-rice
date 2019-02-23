@@ -21,6 +21,7 @@ header-includes: |
 
   \allowdisplaybreaks
 
+  \usepackage[bottom]{footmisc}
   % fancy headers/footers
   \makeatletter
   \usepackage{fancyhdr}
@@ -45,7 +46,7 @@ header-includes: |
   \floatplacement{table}{!htbp}
   \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,abovecaptionskip={\abovecaptionskip},
   belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
-  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple}}
+  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
   \setlength{\captionmargin}{1in}
 
   \newgeometry{margin=1in}
