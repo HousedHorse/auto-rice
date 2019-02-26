@@ -56,12 +56,12 @@ if has("autocmd")
     autocmd BufReadPost,BufNewFile *.rmd :normal /--- nj}zz
     autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%');"<space>\|<space>R<space>--vanilla<enter>
 
-    " markdown stuff
-    " autocompile
-    autocmd BufWritePost *.md :silent execute "!(pandoc % -f gfm -o /tmp/%:t:r.pdf; killall -SIGHUP mupdf > /dev/null 2> /dev/null) &"
-    " automagically open mupdf for previewing (and compile once)
-    autocmd FileType markdown :silent execute "!(pandoc % -f gfm -o /tmp/%:t:r.pdf ; mupdf /tmp/%:t:r.pdf > /dev/null 2> /dev/null) &"
-    autocmd FileType markdown map <F5> :!(pandoc % -f gfm -o /tmp/%:t:r . '.pdf')
+    "" markdown stuff
+    "" autocompile
+    "autocmd BufWritePost *.md :silent execute "!(pandoc % -f gfm -o /tmp/%:t:r.pdf; killall -SIGHUP mupdf > /dev/null 2> /dev/null) &"
+    "" automagically open mupdf for previewing (and compile once)
+    "autocmd FileType markdown :silent execute "!(pandoc % -f gfm -o /tmp/%:t:r.pdf ; mupdf /tmp/%:t:r.pdf > /dev/null 2> /dev/null) &"
+    "autocmd FileType markdown map <F5> :!(pandoc % -f gfm -o /tmp/%:t:r . '.pdf')
 
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

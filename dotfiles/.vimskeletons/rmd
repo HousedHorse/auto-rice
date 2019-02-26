@@ -32,6 +32,7 @@ header-includes: |
   \cfoot{\thepage}
   \rfoot{}
   \renewcommand{\headrulewidth}{0.4pt}
+  \makeatother
 
   \usepackage{amsmath, amsfonts,amssymb, amsthm}
   \usepackage{siunitx}
@@ -132,9 +133,9 @@ header-includes: |
   \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
               \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
-  \renewcommand{\labelitemi}{\large$\bullet$}
+  \renewcommand{\labelitemi}{$\bullet$}
   \renewcommand{\labelitemii}{\ding{226}}
-  \renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+  \renewcommand{\labelitemiii}{\small$\blacksquare$}
   \renewcommand{\labelitemiv}{\small$\triangleright$}
 
   \titleformat{\paragraph} % command to change
@@ -184,7 +185,6 @@ header-includes: |
   \usepackage{threeparttablex}
   \usepackage[normalem]{ulem}
   \usepackage{makecell}
-  \pagestyle{fancy}
 
   \renewcommand{\sectionautorefname}{Section}
   \renewcommand{\subsectionautorefname}{Subection}
@@ -198,6 +198,9 @@ header-includes: |
   \renewcommand{\theparagraph}{\bfseries \@currentlabelname}
   \renewcommand{\thesubparagraph}{\itshape \@currentlabelname}
   \makeatother
+
+  \usepackage{enumitem}
+  \setitemize{itemsep=0em}
   ```
 output:
   pdf_document:
