@@ -45,10 +45,11 @@ header-includes: |
 
   \floatplacement{figure}{!htbp}
   \floatplacement{table}{!htbp}
-  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,abovecaptionskip={\abovecaptionskip},
-  belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
-  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
-  \setlength{\captionmargin}{1in}
+  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,
+  belowcaptionskip={1em},aboveskip=\intextsep,belowskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},rulecolor=\color{black},
+  mathescape=F}
+  \setlength{\captionmargin}{0.5in}
 
   \newgeometry{margin=1in}
 
@@ -214,10 +215,12 @@ knitr::opts_chunk$set(echo = FALSE)
 options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
 ```
+\pagestyle{fancy}
 \thispagestyle{empty}
 \counterwithin{lstlisting}{section}
 \newpage
 \pagenumbering{roman}
+\setcounter{page}{2}
 \thispagestyle{plain}
 \tableofcontents
 \newpage
