@@ -2,6 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# git prompt stuff
+#GIT_PROMPT_ONLY_IN_REPO=1
+#source ~/.bash-git-prompt/gitprompt.sh
+#
+#GIT_PROMPT_START="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]"
+#GIT_PROMPT_END="\$ "
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

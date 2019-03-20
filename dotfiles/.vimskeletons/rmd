@@ -51,7 +51,7 @@ header-includes: |
   mathescape=F}
   \setlength{\captionmargin}{0.5in}
 
-  \newgeometry{margin=1in}
+  \newgeometry{margin=1in,headheight=1em}
 
   \newtheoremstyle{plain}
   {12pt}   % ABOVESPACE
@@ -202,6 +202,10 @@ header-includes: |
 
   \usepackage{enumitem}
   \setitemize{itemsep=0em}
+
+  % hack to allow markdown parsing inside environments
+  \let\Begin\begin
+  \let\End\end
   ```
 output:
   pdf_document:
@@ -214,6 +218,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
+library(tidyverse)
+table_color = "#eeecf5"
 ```
 \pagestyle{fancy}
 \thispagestyle{empty}

@@ -9,8 +9,11 @@ execute pathogen#infect()
 " Indent settings
 set autoindent
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set nosmarttab
+
+let mapleader=","
 
 " blinking cursor
 set guicursor=a:blinkwait700-blinkon400-blinkoff250
@@ -33,7 +36,7 @@ if has("autocmd")
     filetype plugin indent on
 
     " remove trailing whitespace
-    autocmd BufWritePre * noh | let _save_pos=getpos(".") | %s/\s\+$//e | let _s=@/ | let @/=_s | noh | unlet _s | call setpos('.', _save_pos) | unlet _save_pos | noh
+    autocmd BufWritePre * let _save_pos=getpos(".") | let _s=@/ | silent! %s/\s\+$//e | let @/=_s | unlet _s | call setpos('.', _save_pos) | unlet _save_pos | noh
 
     " use actual tab chars in Makefiles.
     autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
@@ -72,9 +75,6 @@ if has("autocmd")
     autocmd BufNewFile *.cc if @% != 'main.cc' | execute "r $HOME/.vimskeletons/cpp" | execute "%s/HEADERNAME/\\=expand('%:t:r') . '.h'/g" | execute "%s/CLASSNAME/\\=expand('%:t:r')/g" | execute "w" | execute "edit ".expand('%:t:r').'.h' | execute "r $HOME/.vimskeletons/cpph" | execute "%s/INCLUSIONGUARD/\\=toupper(expand('%:t:r')) . '\_H'/g" | execute "%s/CLASSNAME/\\=expand('%:t:r')/g" | execute "1d" | execute "w" | execute "edit ".expand('%:t:r').'.cc' | else | execute "r $HOME/.vimskeletons/maincpp" | endif | execute "1d" | execute "w" | execute "redraw!" | if @% == 'main.cc' | execute "call cursor(3,0)"
     " Qt stuff
     autocmd BufNewFile *.pro execute "r $HOME/.vimskeletons/pro" | execute "%s/APPNAME/\\=expand('%:t:r')" | execute "w" | execute "1d" | execute "w" | execute "redraw!" | execute "edit ".expand('%:t:r').'.qrc' | execute "r $HOME/.vimskeletons/qrc" | execute "1d" | execute "w" | execute "edit ".expand('%:t:r').'.pro' | execute "redraw!"
-
-    " python stuff
-    autocmd BufNewFile *.py :silent execute "r $HOME/.vimskeletons/py" | :silent execute "1d" | :silent execute "call cursor(4,3)"
 
     " prolog
     autocmd BufEnter *.pl set syntax=prolog
@@ -173,8 +173,9 @@ hi Constant cterm=NONE ctermfg=5 ctermbg=NONE
 hi Comment cterm=NONE ctermfg=2 ctermbg=NONE
 hi Special cterm=NONE ctermfg=7 ctermbg=NONE
 
-hi MatchParen cterm=NONE ctermfg=0 ctermbg=6
-hi Search cterm=NONE ctermfg=0 ctermbg=8
+hi MatchParen cterm=NONE ctermfg=0 ctermbg=5
+hi Search cterm=NONE ctermfg=15 ctermbg=4
+hi IncSearch cterm=NONE ctermfg=15 ctermbg=4
 
 " fancy hack for leading whitespace
 "set conceallevel=2 concealcursor=ni
