@@ -99,7 +99,7 @@ set $ws3  "3 "
 set $ws4  "4 "
 set $ws5  "5 "
 set $ws6  "6 "
-set $ws7  "7 "
+set $ws7  "7 "
 set $ws8  "8 "
 set $ws9  "9 "
 set $ws10 "10 "
@@ -138,13 +138,13 @@ bindsym $mod+Shift+equal move container to workspace $ws12
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# bindsym $mod+Shift+r exec "i3-nagbar -t warning -m 'You pressed the restart i3 shortcut. Do you really want to restart i3?' -b 'Yes' 'i3-msg restart'" 
+# bindsym $mod+Shift+r exec "i3-nagbar -t warning -m 'You pressed the restart i3 shortcut. Do you really want to restart i3?' -b 'Yes' 'i3-msg restart'"
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
-# bindsym $mod+Shift+e exec i3-msg exit 
-bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'You pressed the power shortcut. Do you really want to shut down?' -b 'Yes' 'i3exit shutdown'" 
-bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot?' -b 'Yes' 'i3exit reboot'" 
-bindsym $mod+Shift+l exec "i3-nagbar -t warning -m 'You pressed the sleep shortcut. Do you really want to sleep?' -b 'Yes' 'i3exit suspend'" 
+# bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'You pressed the power shortcut. Do you really want to shut down?' -b 'Yes' 'i3exit shutdown'"
+bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot?' -b 'Yes' 'i3exit reboot'"
+bindsym $mod+Shift+l exec "i3-nagbar -t warning -m 'You pressed the sleep shortcut. Do you really want to sleep?' -b 'Yes' 'i3exit suspend'"
 bindsym XF86PowerOff exec "i3-nagbar -t warning -m 'You pressed the power button. Do you really want to shut down?' -b 'Yes' 'i3exit shutdown'"
 
 # resize window (you can also use the mouse for that)
@@ -174,18 +174,18 @@ mode "resize" {
 
 # set colors
 # clean this up later
-set $bg-color            #1a1a1a
-set $inactive-bg-color   #1a1a1a
-set $urgent-bg-color     #1a1a1a
+set $bg-color            #969896
+set $inactive-bg-color   #1e1e1e
+set $urgent-bg-color     #1e1e1e
 set $text-color          #ffa200
 set $inactive-text-color #ecd9cb
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $bg-color           
+client.focused          $bg-color           $bg-color          $text-color          $bg-color
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color  
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
 
 # hide all the things
 hide_edge_borders both
@@ -247,12 +247,6 @@ exec setxkbmap -option caps:none
 workspace_auto_back_and_forth yes
 
 # Custom wallpaper
-#exec_always feh --bg-scale ~/pictures/wallpapers/mountains.jpg
-#exec_always feh --bg-scale ~/pictures/wallpapers/fox.jpg
-#exec_always feh --bg-scale ~/pictures/wallpapers/powerlines.jpg
-#exec_always feh --bg-scale ~/pictures/wallpapers/sky.jpg
-#exec_always feh --bg-scale ~/pictures/wallpapers/fire.jpg
-#exec_always feh --bg-scale ~/pictures/wallpapers/voxel-fox.jpg
 exec_always feh --bg-scale ~/.wallpaper
 
 # Compton for opacity
